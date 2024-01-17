@@ -65,8 +65,8 @@ export default function Home() {
       logo: "/ziggy-logo.svg",
       locationX: "33vw",
       locationY: "50vh",
-      locationXM: "53vw",
-      locationYM: "66vh"
+      locationXM: "63vw",
+      locationYM: "76vh"
     },
     {
       title: "Portfolio",
@@ -84,7 +84,7 @@ export default function Home() {
       locationX: "67vw",
       locationY: "84vh",
       locationXM: "13vw",
-      locationYM: "83vh"
+      locationYM: "65vh"
     }
   ]
 
