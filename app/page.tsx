@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Lemon, Sora, Bebas_Neue, Press_Start_2P, Rubik_Burned, Poppins, IBM_Plex_Mono } from "next/font/google"
+import { Lemon, Sora, Bebas_Neue, Rubik_Burned, Poppins, IBM_Plex_Mono } from "next/font/google"
 
 import LinkButtons from "@/components/button"
 import Link from "next/link"
@@ -33,17 +33,12 @@ const bebas = Bebas_Neue({
   weight: ['400'],
 })
 
-const press = Press_Start_2P({
-  subsets: ['latin'],
-  weight: ['400'],
-})
-
 const ibm = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['300'],
 })
 
-const fonts = [poppins, rubik, lemon, sora, bebas, press, poppins]
+const fonts = [poppins, rubik, lemon, sora, bebas, poppins]
 
 export default function Home() {
 
