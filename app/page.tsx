@@ -64,30 +64,36 @@ export default function Home() {
       link: "https://useziggy.com",
       logo: "/ziggy-logo.svg",
       locationX: "33vw",
-      locationY: "50vh"
+      locationY: "50vh",
+      locationXM: "53vw",
+      locationYM: "66vh"
     },
     {
       title: "Portfolio",
       link: "https://portfoliwoah.io",
       logo: "/portfoliwoah-logo.svg",
       locationX: "78vw",
-      locationY: "20vh"
+      locationY: "20vh",
+      locationXM: "73vw",
+      locationYM: "30vh"
     },
     {
       title: "Oustro",
       link: "https://oustro.xyz",
       logo: "/oustro-logo.svg",
       locationX: "67vw",
-      locationY: "84vh"
+      locationY: "84vh",
+      locationXM: "13vw",
+      locationYM: "83vh"
     }
   ]
 
 
   return (
-    <main className="w-full bg-slate-100 h-screen px-24 py-8">
-      <h1 className={`${fonts[font].className} text-8xl sm:text-9xl`}>Oustro</h1>
-      <h2 className={`${poppins.className} text-xs sm:text-base left-4`}>A creative collective that makes unique software, <span className="underline">for everyone.</span></h2>
-      <div className="flex items-center gap-4 mt-8">
+    <main className="w-full bg-slate-100 h-screen px-4 sm:px-24 py-8">
+      <h1 className={`${fonts[font].className} text-7xl sm:text-9xl`}>Oustro</h1>
+      <h2 className={`${poppins.className} text-xs sm:text-base`}>A creative collective that makes unique software, <span className="underline">for everyone.</span></h2>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
         <LinkButtons title="Careers" link="/" />
         <LinkButtons title="Investors" link="mailto:invest@oustro.xyz" />
         <LinkButtons title="Blog" link="/" />
@@ -95,20 +101,36 @@ export default function Home() {
         <LinkButtons title="X (Twitter)" link="https://twitter.com/oustrohq" />
       </div>
       {work.map((item, index) => (
-        <div key={index} style={{ position: "absolute", top: item.locationY, left: item.locationX }}>
-          <Link href={item.link}>
-            <div>
-              <Image
-              src={item.logo}
-              alt={item.title}
-              width={50}
-              height={50}
-              className="mx-auto"
-              />
-              <p className={`${ibm.className} mx-auto mt-2 text-sm`}>{item.title}</p>
-            </div>
-          </Link>
-        </div>
+        <>
+          <div className="hidden sm:block" key={index} style={{ position: "absolute", top: item.locationY, left: item.locationX }}>
+            <Link href={item.link}>
+              <div>
+                <Image
+                src={item.logo}
+                alt={item.title}
+                width={50}
+                height={50}
+                className="mx-auto"
+                />
+                <p className={`${ibm.className} mx-auto mt-2 text-sm`}>{item.title}</p>
+              </div>
+            </Link>
+          </div>
+          <div className="block sm:hidden" key={index} style={{ position: "absolute", top: item.locationYM, left: item.locationXM }}>
+            <Link href={item.link}>
+              <div>
+                <Image
+                src={item.logo}
+                alt={item.title}
+                width={50}
+                height={50}
+                className="mx-auto"
+                />
+                <p className={`${ibm.className} mx-auto mt-2 text-sm`}>{item.title}</p>
+              </div>
+            </Link>
+          </div>
+        </>
       ))}
     </main>
   )

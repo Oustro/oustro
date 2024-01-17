@@ -9,8 +9,10 @@ const poppins = Poppins({
 export default function LinkButtons({ title, link } : { title: string, link: string }) {
 
   return (
-    <Link target="_blank" href={link} className={`${poppins.className} bg-[#6851FF] px-2 py-1 rounded text-white hover:bg-black transition`}>
-      {title}
-    </Link>
+    <div>
+      <Link target="_blank" href={link} className={`${poppins.className} bg-[#6851FF] px-2 py-1 rounded text-white hover:bg-black transition`}>
+        {title}
+      </Link>
+    </div>
   )
 }
