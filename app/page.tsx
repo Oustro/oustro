@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Lemon, Sora, Bebas_Neue, Rubik_Burned, Poppins, IBM_Plex_Mono } from "next/font/google"
+import { Lemon, Sora, Bebas_Neue, Rubik_Burned, Poppins, Inter} from "next/font/google"
 
 import LinkButtons from "@/components/button"
 import Link from "next/link"
@@ -33,10 +33,11 @@ const bebas = Bebas_Neue({
   weight: ['400'],
 })
 
-const ibm = IBM_Plex_Mono({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300'],
+  weight: ['500'],
 })
+
 
 const fonts = [poppins, rubik, lemon, sora, bebas, poppins]
 
@@ -61,7 +62,8 @@ export default function Home() {
       locationX: "33vw",
       locationY: "50vh",
       locationXM: "63vw",
-      locationYM: "76vh"
+      locationYM: "76vh",
+      font: inter.className
     },
     {
       title: "Portfoliwoah",
@@ -70,7 +72,8 @@ export default function Home() {
       locationX: "78vw",
       locationY: "20vh",
       locationXM: "68vw",
-      locationYM: "30vh"
+      locationYM: "30vh",
+      font: sora.className
     },
     {
       title: "Oustro",
@@ -79,7 +82,8 @@ export default function Home() {
       locationX: "67vw",
       locationY: "84vh",
       locationXM: "13vw",
-      locationYM: "65vh"
+      locationYM: "65vh",
+      font: poppins.className
     }
   ]
 
@@ -90,7 +94,7 @@ export default function Home() {
       <h2 className={`${poppins.className} text-xs sm:text-base`}>A creative collective that makes unique software, <span className="underline">for everyone.</span></h2>
       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
         <LinkButtons title="Careers" link="/" />
-        <LinkButtons title="Let's Chat" link="mailto:chat@oustro.xyz" />
+        <LinkButtons title="Let's Chat!" link="mailto:chat@oustro.xyz" />
         <LinkButtons title="Blog" link="/" />
         <LinkButtons title="GitHub" link="https://github.com/Oustro" />
         <LinkButtons title="X (Twitter)" link="https://twitter.com/oustrohq" />
@@ -99,7 +103,7 @@ export default function Home() {
         <>
           <div className="hidden sm:block" key={index} style={{ position: "absolute", top: item.locationY, left: item.locationX }}>
             <Link href={item.link}>
-              <div>
+              <div className="text-center">
                 <Image
                 src={item.logo}
                 alt={item.title}
@@ -107,7 +111,7 @@ export default function Home() {
                 height={50}
                 className="mx-auto"
                 />
-                <p className={`${ibm.className} mx-auto mt-2 text-sm`}>{item.title}</p>
+                <p className={`${item.font} mx-auto mt-2 text-sm`}>{item.title}</p>
               </div>
             </Link>
           </div>
@@ -121,7 +125,7 @@ export default function Home() {
                 height={50}
                 className="mx-auto"
                 />
-                <p className={`${ibm.className} mx-auto mt-2 text-sm`}>{item.title}</p>
+                <p className={`${item.font} mx-auto mt-2 text-sm`}>{item.title}</p>
               </div>
             </Link>
           </div>
