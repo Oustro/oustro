@@ -4,8 +4,6 @@
   </a>
 </p>
 
-### Oustro is a creative collective that makes unique software, for everyone.
-
 ### We are currently working on:
 - [Oustro](https://oustro.xyz) - A creative collective that makes unique software, for everyone.
 - [Ziggy](https://useziggy.com) - Ziggy is a tool to help business gather better feedback by using AI to have conversations with users at scale. (open sourcing Ziggy soon!)
