@@ -64,12 +64,12 @@ export default function Home() {
       locationYM: "76vh"
     },
     {
-      title: "Portfolio",
+      title: "Portfoliwoah",
       link: "https://portfoliwoah.io",
       logo: "/portfoliwoah-logo.svg",
       locationX: "78vw",
       locationY: "20vh",
-      locationXM: "73vw",
+      locationXM: "68vw",
       locationYM: "30vh"
     },
     {
