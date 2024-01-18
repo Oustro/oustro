@@ -45,7 +45,7 @@ export default function Home() {
   const [font, setFont] = useState(0)
 
   useEffect(() => {
-    if (font < 6) {
+    if (font < 5) {
       const interval = setInterval(() => {
         setFont(font + 1)
       }, 150)
