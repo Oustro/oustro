@@ -90,7 +90,7 @@ export default function Home() {
       <h2 className={`${poppins.className} text-xs sm:text-base`}>A creative collective that makes unique software, <span className="underline">for everyone.</span></h2>
       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
         <LinkButtons title="Careers" link="/" />
-        <LinkButtons title="Investors" link="mailto:invest@oustro.xyz" />
+        <LinkButtons title="Let's Chat" link="mailto:chat@oustro.xyz" />
         <LinkButtons title="Blog" link="/" />
         <LinkButtons title="GitHub" link="https://github.com/Oustro" />
         <LinkButtons title="X (Twitter)" link="https://twitter.com/oustrohq" />
