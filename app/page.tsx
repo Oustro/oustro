@@ -117,7 +117,7 @@ export default function Home() {
           </div>
           <div className="block sm:hidden" key={index} style={{ position: "absolute", top: item.locationYM, left: item.locationXM }}>
             <Link href={item.link}>
-              <div>
+              <div className="text-center">
                 <Image
                 src={item.logo}
                 alt={item.title}
